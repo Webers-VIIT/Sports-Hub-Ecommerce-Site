@@ -1,0 +1,384 @@
+/* Main colors used =>red - #ef3b36 , blue - #47aafa , background - #232323 */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;400&display=swap');
+/* New style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'poppins', sans-serif;
+}
+
+/* Header */
+.top {
+    z-index: 30;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: rgb(255, 255, 255,0.05);
+    box-shadow: 0 10px 25px rgb(0, 0, 0,0.2);
+    backdrop-filter: blur(150px);
+}
+
+.top .logo {
+    margin-left: 8px;
+    margin-top: 20px;
+    float: left;
+    height:50px;
+    width:50px;
+    transition: 0.4s ease;
+}
+
+.top .logo:hover{
+    transform: rotate(360deg);
+}
+
+.top .brand {
+    margin-top: 12px;
+    margin-left: 10px;
+    float: left;
+    height:50px;
+    width:50px;
+    text-decoration: none;
+    color: white;
+}
+
+.top .brand:hover {
+   
+    text-shadow:0 0 5px #33ffff,
+                0 0 5px #66ffff;
+}
+
+.top .heading ul {
+    list-style-type: none;
+    padding:0;
+    overflow:hidden;
+    background: transparent;
+    margin-bottom: 10px;
+    line-height: 25px;
+}
+
+.top .heading li {
+    margin-top: 20px;
+    display: flex;
+    float:right;
+    font-size: larger;
+    height: 63px;
+    margin-right: 15px;
+    
+   
+}
+.top .heading li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    padding:0 10px;
+    line-height: 55px;
+}
+.top .heading li a:hover {
+    color:cyan;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33ffff,
+                0 0 5px #66ffff;
+    overflow: hidden;
+}
+
+section {
+    position: relative;
+    top:80px;
+    padding: 20px;
+    width: fit-content;
+    height: fit-content;
+    margin: 40px auto;
+}
+
+section ul.filters {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+section ul.filters li {
+    list-style: none;
+    background: rgb(255, 255, 255,0.05);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 8px 20px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255,0.05);
+}
+section ul.filters li:hover{
+    border:2px solid cyan;
+    color:cyan;
+    text-shadow:0 0 4px #81ff50;
+}
+
+section .filters ul li.active {
+    background: rgb(255, 255, 255,0.05);
+    backdrop-filter: blur(10px);
+    border:2px solid cyan;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main .itemBox {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 240px;
+    height: 340px;
+    margin: 50px 65px 50px 65px;
+}
+
+
+/* Older style */
+
+body {
+    background-image: url("Images/clothbg4.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* Updated a little bit */
+
+.product {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 240px;
+    height: 340px;
+    background: transparent;
+    backdrop-filter: blur(50px) ;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .25);
+    border: 3px solid rgb(0, 0, 0,0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.product:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px cyan,
+                0 0 10px #81ff50;
+}
+
+.product .imgbox {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.product .imgbox img {
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.details {
+    position: absolute;
+    width: 100%;
+    bottom: -160px;
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.product:hover .details {
+    bottom: 0;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.8s;
+}
+
+.details h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    width: 100%;
+}
+
+.details h2 span {
+    font-size: 12px;
+    color: rgb(128, 128, 128);
+    font-weight: normal;
+}
+
+.details .price {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-weight: bold;
+    color: #ef3b36;
+    font-size: 20px;
+    display: flex;
+}
+
+.details .price span {
+    color: #565959;
+    padding-top: 5px;
+    padding-left: 3px;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.details ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.details ul li {
+    list-style: none;
+    margin: 5px 5px 0;
+    font-size: 12px;
+    font-weight: normal;
+    /* color: rgb(128, 128, 128); */
+}
+
+.details .colors li {
+    width: 16px;
+    height: 16px;
+    border: #232323;
+    border-radius: 50%;
+}
+
+.details .colors li :first-child {
+    margin-left: 0;
+}
+
+.details .colors li:nth-child(1) {
+    background: yellow;
+}
+
+.details .colors li:nth-child(2) {
+    background: blue;
+}
+
+.details .colors li:nth-child(2) {
+    background: red;
+}
+
+.details .colors li:nth-child(3) {
+    background: black;
+}
+
+.details .colors li:nth-child(4) {
+    background: green;
+}
+
+.details .colors li:nth-child(5) {
+    background: wheat;
+}
+
+.details a {
+    display: block;
+    padding: 5px;
+    color: white;
+    margin: 15px;
+    background: #ef3b36;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.details a:hover {
+    color: white;
+    background: #ce5049;
+}
+
+/* footer */
+footer {
+    position: relative;
+    background: rgb(255, 255, 255,0.02);
+    box-shadow: 0 10px 25px rgb(0, 0, 0,0.2);
+    backdrop-filter: blur(100px);
+    height: 35vh;
+    width: 100%;
+    z-index: 30;
+    margin-top: 15px;
+    
+}
+
+footer ul{
+    
+    position: relative;
+    display: flex;
+    z-index: 30;
+    margin-left: 34%;
+    
+}
+
+footer ul li{
+    
+    position: relative;
+    list-style: none;
+    margin: 10px;
+    z-index: 30;
+    margin-top: 50px;
+    color: #fff;
+}
+
+footer ul li a{
+    z-index: 30;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    line-height: 30px;
+    padding-top: 8px;
+    display: inline-block;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 3.5em;
+    border: 1px solid rgb(255, 255, 255,0.4);
+    border-right: 1px solid rgb(255, 255, 255,0.2);
+    border-bottom: 1px solid rgb(255, 255, 255,0.2);
+    backdrop-filter: blur(200px);
+    transition:all 0.5s ease;
+    overflow: hidden;
+}
+
+
+footer ul li a:hover{
+    transform: translate(-10%, -25%);
+}
+
+footer ul li a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 35px;
+    background:rgb(255, 255, 255,0.2);
+    transform: skewX(45deg) translateX(70px) ;
+    transition:all 0.5 ease;
+}
+
+footer ul li a:hover::before
+{
+
+    transform: skewX(45deg) translateX(-50px);
+}
